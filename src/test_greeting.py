@@ -1,7 +1,8 @@
 import pytest
 
-from hello_packaging import greeting
+from .hellopackaging import greeting
 
+# import hellopackaging
 
 @pytest.mark.parametrize('argument, printed_value',
                          [(None, "Hello from a package!"),
@@ -10,3 +11,5 @@ from hello_packaging import greeting
 def test_greeting(capsys, argument, printed_value):
     assert greeting(argument) is None
     assert printed_value in capsys.readouterr().out
+
+
