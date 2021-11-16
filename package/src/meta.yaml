@@ -1,4 +1,4 @@
-{% set name = "hello_packaging" %}
+{% set name = "hellopackaging" %}
 {% set version = "0.0.1" %}
 
 package:
@@ -21,15 +21,17 @@ requirements:
   run:
     - python
 
-test:
-  requires:
-    - pytest
-  imports:
-    hellopackaging
-  source_files:
-    test_greeting.py
-  commands:
-    - python -m pytest test_greeting.py
+#test:
+#  files:
+#    - test_greeting.py
+#  requires:
+#    - pytest
+#    - hellopackaging
+##  imports:
+##    - pytest
+##    - hellopackaging
+#  commands:
+#    - python -m pytest test_greeting.py
 
 about:
   home: https://github.com/toonarmycaptain/conda_package
