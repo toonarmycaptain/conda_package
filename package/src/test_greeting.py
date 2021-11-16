@@ -1,6 +1,10 @@
 import pytest
+import os; print(os.getcwd())
+try:
+    from hellopackaging import greeting
+except ModuleNotFoundError:
+    from .hellopackaging import greeting
 
-from .hellopackaging import greeting
 
 # import hellopackaging
 
